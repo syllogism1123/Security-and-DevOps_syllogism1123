@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 public class ItemControllerTest {
     private ItemController itemController;
 
-    private ItemRepository itemRepository = mock(ItemRepository.class);
+    private final ItemRepository itemRepository = mock(ItemRepository.class);
 
     private List<Item> items;
 

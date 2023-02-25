@@ -23,9 +23,9 @@ import static org.mockito.Mockito.when;
 
 public class CartControllerTest {
     private CartController cartController;
-    private UserRepository userRepository = mock(UserRepository.class);
-    private CartRepository cartRepository = mock(CartRepository.class);
-    private ItemRepository itemRepository = mock(ItemRepository.class);
+    private final UserRepository userRepository = mock(UserRepository.class);
+    private final CartRepository cartRepository = mock(CartRepository.class);
+    private final ItemRepository itemRepository = mock(ItemRepository.class);
     private List<Item> itemList;
 
     @Before

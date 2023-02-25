@@ -22,8 +22,8 @@ import static org.mockito.Mockito.when;
 
 public class OrderControllerTest {
     private OrderController orderController;
-    private UserRepository userRepository = mock(UserRepository.class);
-    private OrderRepository orderRepository = mock(OrderRepository.class);
+    private final UserRepository userRepository = mock(UserRepository.class);
+    private final OrderRepository orderRepository = mock(OrderRepository.class);
     private List<Item> itemList;
 
     @Before
