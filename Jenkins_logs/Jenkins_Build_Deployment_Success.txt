@@ -1,0 +1,123 @@
+Started by user Xin Du
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/project-demo
+The recommended git tool is: NONE
+using credential 37af6ca1-297c-42f7-ad96-748b0a26b241
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/project-demo/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:syllogism1123/Security-and-DevOps_syllogism1123.git # timeout=10
+Fetching upstream changes from git@github.com:syllogism1123/Security-and-DevOps_syllogism1123.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+using GIT_SSH to set credentials 
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Configure Global Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > git fetch --tags --force --progress -- git@github.com:syllogism1123/Security-and-DevOps_syllogism1123.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision d6839207c468cc102d91a9d5c80040b0162d3a08 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d6839207c468cc102d91a9d5c80040b0162d3a08 # timeout=10
+Commit message: "update"
+ > git rev-list --no-walk d6839207c468cc102d91a9d5c80040b0162d3a08 # timeout=10
+[project-demo] $ mvn -f starter_code/pom.xml clean compile package
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.example:auth-course[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding auth-course 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ war ]---------------------------------[m
+[[1;33mWARNING[m] The artifact org.slf4j:slf4j-log4j12:pom:2.0.6 has been relocated to org.slf4j:slf4j-reload4j:pom:2.0.6
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Deleting /var/jenkins_home/workspace/project-demo/starter_code/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 21 source files to /var/jenkins_home/workspace/project-demo/starter_code/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 21 source files to /var/jenkins_home/workspace/project-demo/starter_code/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/project-demo/starter_code/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 6 source files to /var/jenkins_home/workspace/project-demo/starter_code/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.2:test[m [1m(default-test)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running demo.controllers.[1mOrderControllerTest[m
+20:47:48.496 [main] INFO com.example.demo.controllers.OrderController - User submit oder successfully
+20:47:48.556 [main] ERROR com.example.demo.controllers.OrderController - User ist not found
+20:47:48.561 [main] INFO com.example.demo.controllers.OrderController - Load UserOrderHistory successfully 
+20:47:48.562 [main] ERROR com.example.demo.controllers.OrderController - User ist not found
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.146 s - in demo.controllers.[1mOrderControllerTest[m
+[[1;34mINFO[m] Running demo.controllers.[1mCartControllerTest[m
+20:47:48.790 [main] INFO com.example.demo.controllers.CartController - Successfully add to cart
+20:47:48.793 [main] ERROR com.example.demo.controllers.CartController - Item not found
+20:47:48.795 [main] ERROR com.example.demo.controllers.CartController - User not found
+20:47:48.798 [main] ERROR com.example.demo.controllers.CartController - Invalid quantity
+20:47:48.800 [main] ERROR com.example.demo.controllers.CartController - Item not found
+20:47:48.803 [main] ERROR com.example.demo.controllers.CartController - User not found
+20:47:48.807 [main] INFO com.example.demo.controllers.CartController - Successfully remove from cart
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 s - in demo.controllers.[1mCartControllerTest[m
+[[1;34mINFO[m] Running demo.controllers.[1mItemControllerTest[m
+20:47:48.876 [main] INFO com.example.demo.controllers.ItemController - ItemInfo: Round Widget  2.99  A widget that is round
+20:47:48.878 [main] ERROR com.example.demo.controllers.ItemController - Item not found
+20:47:48.882 [main] ERROR com.example.demo.controllers.ItemController - item not found
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 s - in demo.controllers.[1mItemControllerTest[m
+[[1;34mINFO[m] Running demo.controllers.[1mUserControllerTest[m
+20:47:48.924 [main] INFO com.example.demo.controllers.UserController - UserId: 1
+20:47:48.928 [main] ERROR com.example.demo.controllers.UserController - User ist not found
+20:47:48.930 [main] INFO com.example.demo.controllers.UserController - User set name with user
+20:47:48.932 [main] ERROR com.example.demo.controllers.UserController - Password is Invalid
+20:47:48.934 [main] INFO com.example.demo.controllers.UserController - User set name with test
+20:47:48.935 [main] ERROR com.example.demo.controllers.UserController - Password is Invalid
+20:47:48.939 [main] INFO com.example.demo.controllers.UserController - User set name with test
+20:47:48.940 [main] DEBUG com.example.demo.controllers.UserController - Create user successfully  with userName: test
+20:47:48.941 [main] ERROR com.example.demo.controllers.UserController - User ist not found
+20:47:48.943 [main] INFO com.example.demo.controllers.UserController - Username: test
+20:47:48.943 [main] ERROR com.example.demo.controllers.UserController - User ist not found
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in demo.controllers.[1mUserControllerTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 21, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:3.2.2:war[m [1m(default-war)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [auth-course] in [/var/jenkins_home/workspace/project-demo/starter_code/target/auth-course-0.0.1-SNAPSHOT]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Webapp assembled in [335 msecs]
+[[1;34mINFO[m] Building war: /var/jenkins_home/workspace/project-demo/starter_code/target/auth-course-0.0.1-SNAPSHOT.war
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.1.5.RELEASE:repackage[m [1m(repackage)[m @ [36mauth-course[0;1m ---[m
+[[1;34mINFO[m] Replacing main artifact with repackaged archive
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  14.048 s
+[[1;34mINFO[m] Finished at: 2023-02-26T20:47:53Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/jenkins_home/workspace/project-demo/starter_code/target/auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context myApp
+  Redeploying [/var/jenkins_home/workspace/project-demo/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+  Undeploying [/var/jenkins_home/workspace/project-demo/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+  Deploying [/var/jenkins_home/workspace/project-demo/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
